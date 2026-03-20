@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Broken Dust - Rock Band</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background: #0a0a0a;
+        color: #fff;
+        line-height: 1.6;
+    }
+
+    /* HEADER */
+    header {
+        height: 100vh;
+        background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.95)),
+                    url('https://i.ibb.co/XrvYxGqx/3ffin.png');
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .hero {
+        max-width: 800px;
+    }
+
+    .hero h1 {
+        font-size: 4rem;
+        letter-spacing: 6px;
+        color: #ff2e2e;
+        margin-bottom: 10px;
+    }
+
+    .hero p {
+        color: #ccc;
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        display: inline-block;
+        margin-top: 25px;
+        padding: 12px 28px;
+        border: 2px solid #ff2e2e;
+        color: #ff2e2e;
+        text-decoration: none;
+        transition: 0.3s;
+        font-weight: bold;
+    }
+
+    .btn:hover {
+        background: #ff2e2e;
+        color: #000;
+    }
+
+    /* SEZIONI */
+    section {
+        padding: 70px 20px;
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    h2 {
+        color: #ff2e2e;
+        margin-bottom: 25px;
+        font-size: 1.8rem;
+        border-bottom: 2px solid #ff2e2e;
+        display: inline-block;
+        padding-bottom: 5px;
+    }
+
+    p {
+        color: #ccc;
+    }
+
+    /* BAND */
+    .members {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 20px;
+}
+
+    .card {
+    background: #111;
+    border: 1px solid #1a1a1a;
+    overflow: hidden;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+    .card:hover {
+        transform: translateY(-5px) scale(1.03);
+        border-color: #ff2e2e;
+    }
+
+    .card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+    }
+
+    .card:hover img {
+        filter: grayscale(0%);
+        transform: scale(1.05);
+    }
+
+    .card-content {
+        padding: 15px;
+        text-align: center;
+	flex-grow: 1;
+    }
+
+    .card h3 {
+        margin-bottom: 5px;
+    }
+
+    .card p {
+        font-size: 0.9rem;
+        color: #aaa;
+    }
+
+    /* CTA */
+    .cta {
+        text-align: center;
+        background: #111;
+        border: 1px solid #222;
+        padding: 40px 20px;
+        margin-top: 40px;
+    }
+
+    /* CONTATTI */
+    .contacts {
+        text-align: center;
+    }
+
+    .contacts p {
+        margin: 10px 0;
+    }
+
+    /* FOOTER */
+    footer {
+        text-align: center;
+        padding: 25px;
+        background: #000;
+        color: #666;
+        font-size: 0.9rem;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width: 600px) {
+        .hero h1 {
+            font-size: 2.5rem;
+        }
+    }
+@media(max-width: 900px) {
+    .members {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.bd-play-button {
+  margin-top: 16px;
+  padding: 10px 20px;
+  background-color: #e63946;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.bd-play-button:hover {
+  background-color: #c22734;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="hero">
+        <h1>Broken Dust</h1>
+        <p>Tributo Rock / Hard Rock • Energia Pura • Vigevano</p>
+        <a href="#contatti" class="btn">Contattaci</a>
+    </div>
+</header>
+
+<section>
+    <h2>Chi siamo</h2>
+    <p>
+        I Broken Dust sono una rock band di Vigevano che suona con passione e dedizione. Il gruppo si è formato a Vigevano nel 2019 quando Felix (chitarra solista), Giovanni (batteria) e Roberto (basso) hanno deciso di unire le forze e formare una band. Successivamente si è aggiunta Alessandra alle tastiere e Roberto alla voce.
+Eseguono un tributo al rock che va dagli anni ‘80 al 2000: dai Green Day ai Metallica con molti arrangiamenti originali riletti in chiave moderna.
+    </p>
+
+<br><br>
+<button id="btn-track-1" class="bd-play-button">
+  ▶⏸ BROKEN DUST - It's my life
+</button>
+
+<audio id="audio-track-1">
+  <source src="https://olympic-apricot-innrlaiphb.edgeone.app/life%20sito.mp3">
+  Il tuo browser non supporta l'elemento audio.
+</audio>
+<br><br> 
+<!-- SECONDO BRANO -->
+<button id="btn-track-2" class="bd-play-button">
+  ▶⏸ BROKEN DUST - Hungry like the wolf
+</button>
+
+<audio id="audio-track-2">
+  <source src="https://scientific-ivory-3rod7woag2.edgeone.app/hungry%20sito.mp3">
+  Il tuo browser non supporta l'elemento audio.
+</audio>
+</section>
+
+<section>
+    <h2>La Band</h2>
+
+    <div class="members">
+
+        <div class="card">
+            <img src="https://i.postimg.cc/VN7hP96R/Immagine-Whats-App-2025-09-07-ore-19-26-37-5cf97198.jpgg" alt="Roberto cantante">
+            <div class="card-content">
+                <h3>Roberto (Roby2)</h3>
+                <p>Cantante / Chitarra</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://i.postimg.cc/sfcCTWPK/fel.png" alt="Felix">
+            <div class="card-content">
+                <h3>Felix</h3>
+                <p>Chitarra Solista</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://i.postimg.cc/MpzchVNd/DSCF0204.jpg" alt="Giovanni">
+            <div class="card-content">
+                <h3>Giovanni</h3>
+                <p>Batteria</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://i.postimg.cc/HL5fX8sw-/roby1.png" alt="Roberto basso">
+            <div class="card-content">
+                <h3>Roberto (Roby1)</h3>
+                <p>Basso</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://i.postimg.cc/pTCz6kXk/Immagine-Whats-App-2025-09-07-ore-19-26-53-a0a123da.jpg" alt="Alessandra">
+            <div class="card-content">
+                <h3>Alessandra</h3>
+                <p>Tastiere / Voce</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <div class="cta">
+        <h2>Vuoi farci suonare?</h2>
+        <p>
+            Siamo disponibili per live in locali, pub ed eventi.
+            Contattaci su Instagram o via email per organizzare una serata!
+        </p>
+    </div>
+</section>
+
+<section id="contatti" class="contacts">
+    <h2>Contatti</h2>
+    <p>Email: <b>brokendustband@gmail.com</b></p>
+    <p>Instagram: <b>@brokendustband</b></p>
+</section>
+
+<footer>
+    <p>© 2026 Broken Dust - Tributo Rock</p>
+</footer>
+
+<script>
+  const audio1 = document.getElementById('audio-track-1');
+  const audio2 = document.getElementById('audio-track-2');
+  const btn1 = document.getElementById('btn-track-1');
+  const btn2 = document.getElementById('btn-track-2');
+
+  function togglePlay(targetAudio, otherAudio) {
+    // Se il bottone si riferisce alla traccia che sta già suonando
+    if (!targetAudio.paused) {
+      targetAudio.pause();
+      return;
+    }
+
+    // Altrimenti: ferma l'altra traccia (se sta suonando)
+    if (!otherAudio.paused) {
+      otherAudio.pause();
+      otherAudio.currentTime = 0;
+    }
+
+    // E fai partire quella cliccata
+    targetAudio.play();
+  }
+
+  btn1.addEventListener('click', () => {
+    togglePlay(audio1, audio2);
+  });
+
+  btn2.addEventListener('click', () => {
+    togglePlay(audio2, audio1);
+  });
+</script>
+
+
+</body>
+</html>
